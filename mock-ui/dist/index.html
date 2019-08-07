@@ -23,11 +23,11 @@
               <li id="menu" class="left-nav"><a href="javascript:;" class="left-nav-item"><i class="icon-menu"></i></a></li>
             </ul>
             <ul class="d-flex flex-column flex-grow-1 list-unstyled">
-              <li class="left-nav active"><a href="#" class="left-nav-item"><i class="fas fa-border-style"></i><span draggable="true" ondragstart="drag(event)" class="left-nav-text">
+              <li class="left-nav active"><a href="#" class="left-nav-item"><i class="fas fa-border-style"></i><span draggable="true" class="left-nav-text">
                     <input placeholder="Input" disabled class="form-control"></span></a></li>
               <li class="left-nav-seperator"></li>
               <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-home"></i><span class="left-nav-text">
-                    <button draggable="true" ondragstart="drag(event)" class="btn btn-primary">Button</button></span></a></li>
+                    <button draggable="true" id="drag1" class="btn btn-primary">Button</button></span></a></li>
               <li class="left-nav"><a href="#" class="left-nav-item"><i class="fas fa-font"></i><span draggable="true" ondragstart="drag(event)" class="left-nav-text">Text</span></a></li>
             </ul>
             <!---->
@@ -86,7 +86,7 @@
                   <!--    a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled-->
                 </ul>
                 <ul class="navbar-nav">
-                  <li class="nav-item"><a href="#" class="nav-link"><i class="icon-menu"></i></a></li>
+                  <li class="nav-item"><a href="#" id="menu-1" class="nav-link"><i class="icon-menu"></i></a></li>
                 </ul>
               </div>
             </nav>
@@ -102,7 +102,9 @@
             <div class="col">
               <div class="card">
                 <div class="card-body">
-                  <div ondrop="drop(event)" ondragover="allowDrop(event)" class="card-section">Canvas Area</div>
+                  <div class="card-section">
+                    <button class="btn btn-primary">Button 1</button>
+                  </div>
                 </div>
               </div>
             </div>
