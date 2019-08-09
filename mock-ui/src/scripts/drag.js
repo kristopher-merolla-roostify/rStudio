@@ -140,8 +140,32 @@ function updateText() {
   text = inpt.value;
 
   e = document.getElementsByClassName("boxed");
-  console.log(e);
-  console.log(e.innerHTML);
+  // console.log(e);
+  // console.log(e.innerHTML);
   e[0].innerHTML = text;
 
+}
+
+function updateCSS(type) {
+  console.log(type);
+  if(type=="color") {
+    colUpd = document.getElementById("colorUpdate");
+  
+    e = document.getElementsByClassName("boxed");
+  
+    e[0].style.color=colUpd.value;
+  }
+
+  if(type=="background") {
+    console.log("update background");
+    colUpd = document.getElementById("backgroundUpdate");
+  
+    e = document.getElementsByClassName("boxed");
+    console.log(colUpd);
+    e[0].style.backgroundColor=colUpd.value;
+    e[0].style.borderColor=colUpd.value;
+
+  }
+
+  
 }

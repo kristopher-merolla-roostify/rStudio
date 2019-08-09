@@ -27,18 +27,29 @@ aside.right-nav
                     .card-body
                         div.h-75v.overflow-scroll
                             form
-                                .form-group
-                                    label(for='exampleInputEmail33') Width
-                                    input#exampleInputEmail33.form-control(type='text', aria-describedby='emailHelp', placeholder='Enter Width')
+                                //- .form-group
+                                //-     label(for='exampleInputEmail33') Width
+                                //-     input#exampleInputEmail33.form-control(type='text', aria-describedby='emailHelp', placeholder='Enter Width')
+
+                                //- .form-group
+                                //-     label(for='exampleInputPassword2') Height
+                                //-     input#exampleInputPassword2.form-control(type='text', placeholder='Enter Height')
 
                                 .form-group
-                                    label(for='exampleInputPassword2') Height
-                                    input#exampleInputPassword2.form-control(type='text', placeholder='Enter Height')
+                                    label(for='colorUpdate') Color
+                                    input#colorUpdate.form-control(type='color', placeholder='Select Color')
+                            
+                                    div
+                                        button#txt-update-btn.btn.btn-secondary(onclick="updateCSS('color')")
+                                            | Update Color
 
                                 .form-group
-                                    label(for='exampleInputPassword3') Color
-                                    input#exampleInputPassword3.form-control(type='color', placeholder='Select Color')
-
+                                    label(for='backgroundUpdate') Background Color
+                                    input#backgroundUpdate.form-control(type='color', placeholder='Select Color')
+                            
+                                    div
+                                        button#txt-update-btn.btn.btn-secondary(onclick="updateCSS('background')")
+                                            | Update Background
 
 
             //- .card

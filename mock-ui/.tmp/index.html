@@ -142,16 +142,18 @@
                     <div class="h-75v overflow-scroll">
                       <form>
                         <div class="form-group">
-                          <label for="exampleInputEmail33">Width</label>
-                          <input id="exampleInputEmail33" type="text" aria-describedby="emailHelp" placeholder="Enter Width" class="form-control">
+                          <label for="colorUpdate">Color</label>
+                          <input id="colorUpdate" type="color" placeholder="Select Color" class="form-control">
+                          <div>
+                            <button id="txt-update-btn" onclick="updateCSS('color')" class="btn btn-secondary">Update Color</button>
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputPassword2">Height</label>
-                          <input id="exampleInputPassword2" type="text" placeholder="Enter Height" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword3">Color</label>
-                          <input id="exampleInputPassword3" type="color" placeholder="Select Color" class="form-control">
+                          <label for="backgroundUpdate">Background Color</label>
+                          <input id="backgroundUpdate" type="color" placeholder="Select Color" class="form-control">
+                          <div>
+                            <button id="txt-update-btn" onclick="updateCSS('background')" class="btn btn-secondary">Update Background</button>
+                          </div>
                         </div>
                       </form>
                     </div>
