@@ -131,8 +131,6 @@ function setBox(e,eId) {
         document.getElementById(arr[i].id).classList.remove("boxed");
       }
     }
-
-    
   }
 
 }
