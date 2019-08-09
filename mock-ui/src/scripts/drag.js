@@ -177,7 +177,23 @@ function updateCSS(type) {
     
     e[0].style.fontSize=val+"px";
     console.log(e[0].style);
-  }
+  }  
+}
 
-  
+function clearCanvas() {
+  console.log("clearing canvas!");
+  e = document.getElementById("mainFormArea").children;
+  for(i = 0; i > e.length; i++) {
+    item = document.getElementById(e[i].id);
+    item.parentElement.removeChild(item);
+    //clearElement(item);
+    console.log(e.length);
+    console.log(i);
+  }
+}
+
+function clearElement(item) {
+  console.log("finding item!");
+  item.parentElement.removeChild(item);
+  console.log("clearing item!");
 }
