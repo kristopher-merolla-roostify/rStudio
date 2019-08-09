@@ -161,10 +161,22 @@ function updateCSS(type) {
     colUpd = document.getElementById("backgroundUpdate");
   
     e = document.getElementsByClassName("boxed");
-    console.log(colUpd);
+    //console.log(colUpd);
     e[0].style.backgroundColor=colUpd.value;
-    e[0].style.borderColor=colUpd.value;
+    //e[0].style.borderColor=colUpd.value;
 
+  }
+
+  if(type=="text") {
+    colUpd = document.getElementById("textSize");
+
+    val = colUpd.value
+    console.log(val);
+  
+    e = document.getElementsByClassName("boxed");
+    
+    e[0].style.fontSize=val+"px";
+    console.log(e[0].style);
   }
 
   

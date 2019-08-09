@@ -18,6 +18,14 @@ aside.right-nav
                             button#txt-update-btn.btn.btn-secondary(onclick="updateText()")
                                 | Update Text
 
+                            .form-group
+                                label(for='textSize') Text Size
+                                input#textSize.form-control(type='range', placeholder='Select Text Size', min=8, max=48, step=2)
+                        
+                                div
+                                    button#txt-update-btn.btn.btn-secondary(onclick="updateCSS('text')")
+                                        | Update Text Size
+
             .card
                 #headingOne.card-header
                     h2.mb-0
