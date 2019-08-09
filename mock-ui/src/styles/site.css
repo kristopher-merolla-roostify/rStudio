@@ -35,6 +35,10 @@
   color: #fff;
 }
 
+#mainFormArea {
+  min-height: 600px;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
