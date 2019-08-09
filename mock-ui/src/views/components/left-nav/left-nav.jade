@@ -5,26 +5,29 @@ aside
                 a(href="javascript:;").left-nav-item: i.icon-menu
 
         ul.d-flex.flex-column.flex-grow-1.list-unstyled
-            li.left-nav.active
-                a(href="#").left-nav-item
-                    i.fas.fa-border-style
-                    span.left-nav-text(draggable="true")
-                        input.form-control(placeholder="Input", disabled)
-
+            li#editButton.left-nav
+                a(href="#").left-nav-item(onclick="setEditMode()")
+                    i.icon-edit.fa-border-style
+                    span.left-nav-text Toggle Edit Mode
 
             li.left-nav-seperator
             li.left-nav
-                a(href="#").left-nav-item
-                    i.icon-home
-                    span.left-nav-text
-                        button.btn.btn-primary(draggable="true")#drag1
-                            | Button
-
+                a(href="#").left-nav-item(onclick="makeInput()")
+                    i.fas.fa-border-style
+                    span.left-nav-text(draggable="true")
+                        input.form-control(placeholder="Add Input", disabled)
 
             li.left-nav
-                a(href="#").left-nav-item
+                a(href="#").left-nav-item(onclick="makeButton()")
+                    i.icon-home
+                    span.left-nav-text
+                        button.btn.btn-primary.moveElm(draggable="true") Add Button
+        
+            li.left-nav
+                a(href="#").left-nav-item(onclick="makeText()")
                     i.fas.fa-font
-                    span.left-nav-text(draggable="true" ondragstart="drag(event)") Text
+                    span.left-nav-text(draggable="true" ondragstart="drag(event)") Add Text
+
         //
         //    li.left-nav
         //        a(href="#").left-nav-item
