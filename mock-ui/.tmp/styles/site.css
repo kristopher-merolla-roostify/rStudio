@@ -23,6 +23,10 @@
   display: inline-block
 }
 
+.boxed {
+  border: 1px dotted red;
+}
+
 
 #mydivheader {
   padding: 10px;

@@ -1,12 +1,29 @@
 aside.right-nav
     nav.right-nav-wrapper.open
         #accordionExample.accordion
+
+            .card
+                #headingTwo.card-header
+                    h2.mb-0
+                        button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                            | Text
+                #collapseTwo.collapse.show(aria-labelledby='headingTwo', data-parent='#accordionExample')
+                    .card-body
+                        div.h-75v.overflow-scroll
+                            .form-group
+                                label(for='inputText') Form Item Text
+                                input#inputText.form-control(type='text', aria-describedby='emailHelp', placeholder='Enter Text Here')
+                                small#emailHelp.form-text.text-muted When editing an element, text entered in this box will go into the selected element.
+                        div
+                            button#txt-update-btn.btn.btn-secondary(onclick="updateText()")
+                                | Update Text
+
             .card
                 #headingOne.card-header
                     h2.mb-0
                         button.btn.btn-link(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
                             | CSS
-                #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordionExample')
+                #collapseOne.collapse(aria-labelledby='headingOne', data-parent='#accordionExample')
                     .card-body
                         div.h-75v.overflow-scroll
                             form
@@ -22,21 +39,7 @@ aside.right-nav
                                     label(for='exampleInputPassword3') Color
                                     input#exampleInputPassword3.form-control(type='color', placeholder='Select Color')
 
-            .card
-                #headingTwo.card-header
-                    h2.mb-0
-                        button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                            | Text
-                #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
-                    .card-body
-                        div.h-75v.overflow-scroll
-                            .form-group
-                                label(for='exampleInputEmail1') Form Item Text
-                                input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter Text Here')
-                                small#emailHelp.form-text.text-muted When editing an element, text entered in this box will go into the selected element.
-                        div
-                            button#txt-update-btn.btn.btn-secondary
-                                | Update Text
+
 
             //- .card
             //-     #headingTwo.card-header

@@ -92,7 +92,8 @@ function setEditMode() {
 
     // disable the moving functions
     for(i = 0; i< arr.length; i++) {
-      e = document.getElementById(arr[i].id).onmousedown = nothing;
+      e = document.getElementById(arr[i].id);
+      setBox(e,e.id);
     }
 
   } else {
@@ -101,14 +102,48 @@ function setEditMode() {
     element.classList.remove("active")
 
     // enable moving functions
+    for(i = 0; i< arr.length; i++) {
+      e = document.getElementById(arr[i].id);
+      dragElement(e);
+      document.getElementById(arr[i].id).classList.remove("boxed");
+    }
 
   }
 }
 
-function setBox(elemNameStr) {
-  console.log("setting for "+elemNameStr);
-  // set a box around an element
+function setBox(e,eId) {
+  console.log("setting for ");
+
+  e.onmousedown = boxme;
+  
+  function boxme(e) {
+    e = e || window.event;
+    console.log(eId);
+    e.preventDefault();
+    console.log("making a box!");
+
+    arr = document.getElementById("mainFormArea").children;
+    for(i = 0; i< arr.length; i++) {
+      //e = document.getElementById(arr[i].id);
+      if (arr[i].id == eId) {
+        document.getElementById(eId).classList.add("boxed");
+      } else {
+        document.getElementById(arr[i].id).classList.remove("boxed");
+      }
+    }
+
+    
+  }
 
 }
 
-function nothing() {}
+function updateText() {
+  inpt = document.getElementById("inputText");
+  text = inpt.value;
+
+  e = document.getElementsByClassName("boxed");
+  console.log(e);
+  console.log(e.innerHTML);
+  e[0].innerHTML = text;
+
+}

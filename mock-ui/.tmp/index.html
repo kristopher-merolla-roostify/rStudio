@@ -112,12 +112,32 @@
           <nav class="right-nav-wrapper open">
             <div id="accordionExample" class="accordion">
               <div class="card">
+                <div id="headingTwo" class="card-header">
+                  <h2 class="mb-0">
+                    <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="btn btn-link collapsed">Text</button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse show">
+                  <div class="card-body">
+                    <div class="h-75v overflow-scroll">
+                      <div class="form-group">
+                        <label for="inputText">Form Item Text</label>
+                        <input id="inputText" type="text" aria-describedby="emailHelp" placeholder="Enter Text Here" class="form-control"><small id="emailHelp" class="form-text text-muted">When editing an element, text entered in this box will go into the selected element.</small>
+                      </div>
+                    </div>
+                    <div>
+                      <button id="txt-update-btn" onclick="updateText()" class="btn btn-secondary">Update Text</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
                 <div id="headingOne" class="card-header">
                   <h2 class="mb-0">
                     <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link">CSS</button>
                   </h2>
                 </div>
-                <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
+                <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse">
                   <div class="card-body">
                     <div class="h-75v overflow-scroll">
                       <form>
@@ -134,26 +154,6 @@
                           <input id="exampleInputPassword3" type="color" placeholder="Select Color" class="form-control">
                         </div>
                       </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div id="headingTwo" class="card-header">
-                  <h2 class="mb-0">
-                    <button type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="btn btn-link collapsed">Text</button>
-                  </h2>
-                </div>
-                <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
-                  <div class="card-body">
-                    <div class="h-75v overflow-scroll">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Form Item Text</label>
-                        <input id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter Text Here" class="form-control"><small id="emailHelp" class="form-text text-muted">When editing an element, text entered in this box will go into the selected element.</small>
-                      </div>
-                    </div>
-                    <div>
-                      <button id="txt-update-btn" class="btn btn-secondary">Update Text</button>
                     </div>
                   </div>
                 </div>
