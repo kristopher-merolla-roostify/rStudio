@@ -183,7 +183,7 @@ function updateCSS(type) {
 function clearCanvas() {
   console.log("clearing canvas!");
   e = document.getElementById("mainFormArea").children;
-  for(i = 0; i > e.length; i++) {
+  for(i = e.length-1; i >= 0; i--) {
     item = document.getElementById(e[i].id);
     item.parentElement.removeChild(item);
     //clearElement(item);
