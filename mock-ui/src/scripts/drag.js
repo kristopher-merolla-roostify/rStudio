@@ -186,14 +186,12 @@ function clearCanvas() {
   for(i = e.length-1; i >= 0; i--) {
     item = document.getElementById(e[i].id);
     item.parentElement.removeChild(item);
-    //clearElement(item);
-    console.log(e.length);
-    console.log(i);
   }
 }
 
-function clearElement(item) {
-  console.log("finding item!");
+function clearLast() {;
+  console.log("clearing last item!");
+  e = document.getElementById("mainFormArea").children;
+  item = document.getElementById(e[e.length-1].id);
   item.parentElement.removeChild(item);
-  console.log("clearing item!");
 }

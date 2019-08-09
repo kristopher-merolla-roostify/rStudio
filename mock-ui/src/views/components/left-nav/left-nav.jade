@@ -29,8 +29,15 @@ aside
                     span.left-nav-text(draggable="true" ondragstart="drag(event)") Add Text
             li.left-nav-seperator
             li.left-nav
+                a(href="#").left-nav-item(onclick="clearLast()")
+                    i.icon-caret-left
+            li.left-nav
                 a(href="#").left-nav-item(onclick="clearCanvas()")
                     i.icon-trash
+            li.left-nav-seperator
+            li.left-nav
+                a(href="http://localhost:3000/forms/new" target="blank").left-nav-item
+                    i.icon-open-new-window
         //
         //    li.left-nav
         //        a(href="#").left-nav-item
